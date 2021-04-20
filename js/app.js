@@ -10,17 +10,19 @@ const gallery = (() => {
 
 	images.forEach((img) => {
 		img.addEventListener("click", () => {
-			addImage(img.getAttribute("src"), img.getAttribute("alt"));
+			addImage(img.src, img.alt);
 		});
 	});
 
-	imageView.addEventListener("click", () =>
-		imageView.classList.toggle(MOVE_CLASS)
-	);
+	imageView.addEventListener("click", () => {
+		imageView.classList.toggle(MOVE_CLASS);
+		imageToShow.classList.toggle("img-scale");
+	});
 
 	const addImage = (src, alt) => {
 		imageView.classList.toggle(MOVE_CLASS);
-		imageToShow.setAttribute("src", img.getAttribute(src));
-		imageDescription.innerHTML = img.getAttribute(alt);
+		imageToShow.classList.toggle("img-scale");
+		imageToShow.src = src;
+		imageDescription.innerHTML = alt;
 	};
 })();

@@ -383,7 +383,7 @@ body {
 .img-show {
 	transform: scale(0);
 	display: inline-block;
-	height: 80%;
+	width: 80%;
 	box-shadow: 0px 0px 20px #0000008e;
 	transition: transform 0.2s 0.3s ease-in-out;
 }

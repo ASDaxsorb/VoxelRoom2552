@@ -10,10 +10,7 @@ const gallery = (() => {
 
 	images.forEach((img) => {
 		img.addEventListener("click", () => {
-			console.log("xd");
-			imageView.classList.toggle(MOVE_CLASS);
-			imageDescription.innerHTML = img.getAttribute("alt");
-			imageToShow.setAttribute("src", img.getAttribute("src"));
+			addImage(img.getAttribute("src"), img.getAttribute("alt"));
 		});
 	});
 
@@ -21,7 +18,9 @@ const gallery = (() => {
 		imageView.classList.toggle(MOVE_CLASS)
 	);
 
-	return {
-		images,
+	const addImage = (src, alt) => {
+		imageView.classList.toggle(MOVE_CLASS);
+		imageToShow.setAttribute("src", img.getAttribute(src));
+		imageDescription.innerHTML = img.getAttribute(alt);
 	};
 })();

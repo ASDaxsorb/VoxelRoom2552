@@ -378,6 +378,7 @@ body {
 	background-color: #0000006c;
 	backdrop-filter: blur(5px);
 	transition: transform 0.6s;
+	overflow: hidden;
 }
 
 .img-show {
@@ -407,6 +408,28 @@ body {
 	display: inline-block;
 	font-size: 1.4rem;
 	text-align: center;
+}
+
+.nextBtn,
+.backBtn {
+	position: absolute;
+	font-size: 3rem;
+	top: 47%;
+	z-index: 110;
+	cursor: pointer;
+}
+
+.hideBtn {
+	opacity: 0;
+	cursor: auto;
+}
+
+.nextBtn {
+	right: 30px;
+}
+
+.backBtn {
+	left: 30px;
 }
 
 .move {
